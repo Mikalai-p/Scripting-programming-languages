@@ -15,7 +15,7 @@ JavaScript, TypeScript, React, Node.js
 
 ## Автор
 
-Микалай
+Николай
 GitHub: https://github.com/Mikalai-p
 
-Учебный проект.
+Учебные материалы и работы.
