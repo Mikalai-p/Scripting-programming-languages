@@ -1,0 +1,20 @@
+// 1. true + true
+console.log(true + true); // 2
+// 2. 0 + "5"
+console.log(0 + "5"); // "05"
+// 3. 5 + "мм"
+console.log(5 + "мм"); // "5мм"
+// 4. 8 / Infinity
+console.log(8 / Infinity); // 0
+// 5. 9 * "\n9"
+console.log(9 * "\n9"); // 81
+// 6. null - 1
+console.log(null - 1); // -1
+// 7. "5" - 2
+console.log("5" - 2); // 3
+// 8. "5px" - 3
+console.log("5px" - 3); // NaN (Not a Number)
+// 9. true - 3
+console.log(true - 3); // -2
+// 10. 7 || 0
+console.log(7 || 0); // 7

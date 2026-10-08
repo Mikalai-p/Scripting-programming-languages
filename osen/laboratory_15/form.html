@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Форма регистрации</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <form id="registrationForm">
+            <h2>Заполните форму:</h2>
+            
+            <!-- Фамилия -->
+            <div class="field">
+                <div class="input-container">
+                    <label for="surname">Фамилия *</label>
+                    <input type="text" name="surname" id="surname">
+                </div>
+                <div class="error" id="surname_err"></div>
+            </div>
+            
+            <!-- Имя -->
+            <div class="field">
+                <div class="input-container">
+                    <label for="name">Имя *</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="error" id="name_err"></div>
+            </div>
+            
+            <!-- Email -->
+            <div class="field">
+                <div class="input-container">
+                    <label for="email">E-mail *</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div class="error" id="email_err"></div>
+            </div>
+            
+            <!-- Телефон -->
+            <div class="field">
+                <div class="input-container">
+                    <label for="phone">Телефон *</label>
+                    <input type="text" name="phone" id="phone" placeholder="(0xx)xxx-xx-xx">
+                </div>
+                <div class="error" id="phone_err"></div>
+            </div>
+            
+            <!-- Город -->
+            <div class="field">
+                <div class="input-container">
+                    <label for="city">Город *</label>
+                    <select name="city" id="city">
+                        <option value="">Выберите город</option>
+                        <option value="Минск">Минск</option>
+                        <option value="Брест">Брест</option>
+                        <option value="Гродно">Гродно</option>
+                        <option value="Могилев">Могилев</option>
+                    </select>
+                </div>
+                <div class="error" id="city_err"></div>
+            </div>
+            
+            <!-- Студент БГТУ -->
+            <div class="field checkbox-field">
+                <div class="input-container">
+                    <input type="checkbox" name="bstu" id="bstu">
+                    <label for="bstu">Я учусь в БГТУ</label>
+                </div>
+            </div>
+            
+            <!-- Курс обучения -->
+            <div class="field">
+                <div class="input-container">
+                    <label>На каком курсе Вы учитесь? *</label>
+                    <div class="radiocontainer">
+                        <div class="radio-option">
+                            <input type="radio" name="course" id="course1" value="1" disabled>
+                            <label for="course1">1</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="course" id="course2" value="2" disabled>
+                            <label for="course2">2</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="course" id="course3" value="3" disabled>
+                            <label for="course3">3</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="course" id="course4" value="4" disabled>
+                            <label for="course4">4</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="error" id="course_err"></div>
+            </div>
+            
+            <!-- Доп. информация -->
+            <div class="field">
+                <div class="input-container">
+                    <label for="about">Расскажите о себе *</label>
+                    <textarea name="about" id="about" maxlength="250" rows="4"></textarea>
+                    <div class="char-counter"><span id="charCount">0</span>/250</div>
+                </div>
+                <div class="error" id="about_err"></div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Проверить</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

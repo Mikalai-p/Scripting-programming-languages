@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Recurse \"D:\\\\University\\\\2-ой курс\\\\TS\\\\Lab8\\\\Lab8\\\\src\" | Where-Object { -not $_.PSIsContainer } | Select-Object FullName)",
+      "PowerShell($src = \"D:\\\\University\\\\2-ой курс\\\\TS\\\\Lab8\\\\Lab8\"; $dst = \"D:\\\\University\\\\2-ой курс\\\\TS\\\\Lab9\\\\Lab9\"; New-Item -ItemType Directory -Force -Path $dst | Out-Null; Copy-Item -Path \"$src\\\\src\" -Destination $dst -Recurse -Force; Copy-Item -Path \"$src\\\\public\" -Destination $dst -Recurse -Force; Copy-Item -Path \"$src\\\\package.json\",\"$src\\\\tsconfig.json\",\"$src\\\\tsconfig.app.json\",\"$src\\\\tsconfig.node.json\",\"$src\\\\vite.config.ts\",\"$src\\\\index.html\",\"$src\\\\eslint.config.js\",\".gitignore\" -Destination $dst -ErrorAction SilentlyContinue; Get-ChildItem $dst | Format-Table Name)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npx tsr *)",
+      "Bash(npx @tanstack/router-cli generate)",
+      "Bash(npm run *)"
+    ]
+  }
+}

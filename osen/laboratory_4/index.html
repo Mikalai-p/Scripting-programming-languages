@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коллекции книг</title>
+</head>
+<body>
+    <h2>Добавление книг в коллекцию</h2>
+    
+    <div>
+        <input type="text" id="id" placeholder="ID книги">
+        <input type="text" id="title" placeholder="Название">
+        <input type="number" id="col" placeholder="Количество страниц">
+        <input type="text" id="author" placeholder="Автор">
+        <button onclick="addBook()">Добавить книгу</button>
+    </div>
+
+    <div id="totalPages" style="margin-top: 20px; font-size: 18px; font-weight: bold;">
+        Общее количество страниц: 0
+    </div>
+
+    <script src="g.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Сборка
+dist/
+build/
+*.tsbuildinfo
+out/
+
+# Кэш
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist/
+.serverless/
+.eslintcache
+
+# TypeScript / JS maps
+*.js.map
+*.jsx.map
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Office temp
+~$*
+*.tmp
+
+# Логи
+*.log
+
+# Архивы
+*.zip
+*.rar
+*.7z
+
+# Курсовой ЦД (не нужен в репо)
+весенний семестр/Курсовой ЦД/

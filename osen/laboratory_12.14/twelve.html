@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Судоку</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            height: 100vh;
+            background-position: 50%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: rgb(119, 68, 119);
+            font-size: 48px;
+        }
+
+        #sudoku-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        table {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-right: 30px;
+            border: 5px solid gray;
+        }
+
+        td {
+            width: 60px;
+            height: 60px;
+            border: 2px solid gray; 
+            text-align: center;
+            font-size: 28px;
+            cursor: text;
+        }
+
+        tr:nth-child(3n) td {
+            border-bottom: 5px solid gray;
+        }
+
+        td:nth-child(3n) {
+            border-right: 5px solid gray;
+        }
+
+        .error {
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+
+        .valid {
+            background-color: yellow;
+        }
+
+        td:hover {
+            background-color: lightblue;
+        }
+
+        .filled {
+            background-color: #f0f0f0;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        button {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px;
+            padding: 10px 5px;
+            font-size: 16px;
+            border: none;
+            background-color: rgb(119, 68, 119);
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 250px;
+        }
+
+        button:hover {
+            background-color: rgb(151, 85, 151);
+        }
+
+        button:active {
+            background-color: rgb(184, 101, 184);
+        }
+    </style>
+</head>
+<body>
+    <h1>Судоку</h1>
+    <div id="sudoku-container">
+        <table id="sudoku-board"></table>
+        <div class="button-container">
+            <button id="generateEmptyBoard">Новое игровое поле</button>
+            <button id="checkedValidateBoard">Проверить</button>
+            <button id="generateSolution">Правильно заполненное поле</button>
+        </div>
+    </div>
+    <script src = "twelve.js">
+    </script>
+</body>
+</html>

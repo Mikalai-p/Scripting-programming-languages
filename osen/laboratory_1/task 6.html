@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6 - Проверка успеваемости студента</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .controls {
+            margin: 15px 0;
+        }
+        label {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task 6 - Проверка успеваемости студента</h1>
+        <div class="controls">
+            <label>
+                <input type="checkbox" id="russian" checked> Русский язык
+            </label>
+            <label>
+                <input type="checkbox" id="math" checked> Математика
+            </label>
+            <label>
+                <input type="checkbox" id="english" checked> Английский язык
+            </label>
+        </div>
+        
+        <button onclick="runTask()">Запустить задание</button>
+        
+        <script>
+            function runTask() {
+                let russian = document.getElementById('russian').checked;
+                let math = document.getElementById('math').checked;
+                let english = document.getElementById('english').checked;
+
+                console.log("Результаты:");
+                console.log("Русский язык:", russian);
+                console.log("Математика:", math);
+                console.log("Английский язык:", english);
+
+                if (russian && math && english) {
+                    console.log("Студент переведен на следующий курс");
+                } else if (!russian && !math && !english) {
+                    console.log("Студент отчислен");
+                } else {
+                    console.log("Студент ожидает пересдачи");
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

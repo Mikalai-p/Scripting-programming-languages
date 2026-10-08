@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коллекции в JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Работа с коллекциями в JavaScript</h1>
+
+    <!-- Задача 1: Товары (Set) -->
+    <div class="task">
+        <h2>1. Управление товарами (Set)</h2>
+        <div class="input-group">
+            <label for="productName">Название товара:</label>
+            <input type="text" id="productName" placeholder="Введите название">
+            <button id="addProductBtn">Добавить товар</button>
+            <button id="removeProductBtn">Удалить товар</button>
+            <button id="checkProductBtn">Проверить наличие</button>
+        </div>
+        <button id="showProductsBtn">Показать все товары</button>
+        <button id="getProductsCountBtn">Показать количество</button>
+        <div class="result" id="productResult"></div>
+    </div>
+
+    <!-- Задача 2: Студенты (Set) -->
+    <div class="task">
+        <h2>2. Управление студентами (Set)</h2>
+        <div class="input-group">
+            <label for="studentId">Номер зачетки:</label>
+            <input type="text" id="studentId" placeholder="Номер">
+            <label for="studentGroup">Группа:</label>
+            <input type="text" id="studentGroup" placeholder="Группа">
+            <label for="studentName">ФИО:</label>
+            <input type="text" id="studentName" placeholder="ФИО">
+        </div>
+        <button id="addStudentBtn">Добавить студента</button>
+        <button id="removeStudentBtn">Удалить по номеру</button>
+        <button id="filterStudentsBtn">Фильтровать по группе</button>
+        <button id="sortStudentsBtn">Сортировать по номеру</button>
+        <div class="result" id="studentResult"></div>
+    </div>
+
+    <!-- Задача 3: Товары в корзине (Map) -->
+    <div class="task">
+        <h2>3. Корзина товаров (Map)</h2>
+        <div class="input-group">
+            <label for="productId">ID товара:</label>
+            <input type="text" id="productId" placeholder="ID">
+            <label for="productTitle">Название:</label>
+            <input type="text" id="productTitle" placeholder="Название">
+            <label for="productQuantity">Количество:</label>
+            <input type="number" id="productQuantity" placeholder="Кол-во" value="1">
+            <label for="productPrice">Цена:</label>
+            <input type="number" id="productPrice" placeholder="Цена" value="0">
+        </div>
+        <button id="addProductToCartBtn">Добавить товар</button>
+        <button id="removeProductByIdBtn">Удалить по ID</button>
+        <button id="removeProductByTitleBtn">Удалить по названию</button>
+        <button id="updateProductQuantityBtn">Изменить количество</button>
+        <button id="updateProductPriceBtn">Изменить цену</button>
+        <button id="calculateCartBtn">Рассчитать корзину</button>
+        <div class="result" id="cartResult"></div>
+    </div>
+
+    <!-- Задача 4: Кеширование (WeakMap) -->
+    <div class="task">
+        <h2>4. Кеширование результатов (WeakMap)</h2>
+        <div class="input-group">
+            <label for="cacheInput">Входные данные:</label>
+            <input type="text" id="cacheInput" placeholder="Введите данные">
+            <button id="calculateWithCacheBtn">Вычислить с кешированием</button>
+            <button id="clearCacheBtn">Очистить кеш</button>
+        </div>
+        <div class="result" id="cacheResult"></div>
+    </div>
+
+    <script src="fourh.js"></script>
+</body>
+</html>

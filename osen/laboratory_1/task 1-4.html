@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение задач JavaScript</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f8fa;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .task {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .code {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .result {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid #4caf50;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .comparison-item {
+            padding: 10px;
+            background-color: #f1f8ff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Решение задач по JavaScript</h1>
+    
+    <div class="task">
+        <h2>Задача 1: Типы данных</h2>
+        <p>Объявление переменных и определение их типов:</p>
+        <div class="code">
+            let a = 5;<br>
+            let name = "Name";<br>
+            let i = 0;<br>
+            let double = 0.23;<br>
+            let result = 1/0;<br>
+            let answer = true;<br>
+            let no = null;
+        </div>
+        <div class="result" id="task1-result">
+            
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>Задача 2</h2>
+        <p>Выполнение математических операций:</p>
+        <div class="code">
+            45/5 = 9<br>
+            21/5 = 4.2<br>
+            9*4 = 36
+        </div>
+        <div class="result" id="task2-result">
+            
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>Задача 3: Инкремент</h2>
+        <p>Постфиксный и префиксный инкремент:</p>
+        <div class="code">
+            let i = 2;<br>
+            let a = ++i;<br>
+            let b = i++;
+        </div>
+        <div class="result" id="task3-result">
+            
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>Задача 4: Сравнения</h2>
+        <p>Строгое сравнение (===) значений:</p>
+        <div class="code">
+            
+        </div>
+        <div class="result" id="task4-result">
+            
+        </div>
+    </div>
+
+    <script>
+        
+        let a = 5;
+        let name = "Name";
+        let i = 0;
+        let double = 0.23;
+        let result = 1/0;
+        let answer = true;
+        let no = null;
+        
+        document.getElementById('task1-result').innerHTML = `
+            a = ${a} (${typeof a})<br>
+            name = "${name}" (${typeof name})<br>
+            i = ${i} (${typeof i})<br>
+            double = ${double} (${typeof double})<br>
+            result = ${result} (${typeof result})<br>
+            answer = ${answer} (${typeof answer})<br>
+            no = ${no} (${typeof no})
+        `;
+        
+        
+        const calc1 = 45/5;
+        const calc2 = 21/5;
+        const calc3 = 9*4;
+        
+        document.getElementById('task2-result').innerHTML = `
+            45/5 = ${calc1}<br>
+            21/5 = ${calc2}<br>
+            9*4 = ${calc3}
+        `;
+        
+        
+        let i2 = 2;
+        let a2 = ++i2;  // префиксный инкремент
+        let b2 = i2++;  // постфиксный инкремент
+        
+        document.getElementById('task3-result').innerHTML = `
+            Исходное значение i = 2<br>
+            После let a = ++i: a = ${a2}, i = ${i2}<br>
+            После let b = i++: b = ${b2}, i = ${i2}
+        `;
+        
+        
+        const comparisons = [
+            { expr: '"Котик" === "котик"', value: "Котик" === "котик" },
+            { expr: '"Кот" === "Котик"', value: "Кот" === "Котик" },
+            { expr: '"Котик" === "китик"', value: "Котик" === "китик" },
+            { expr: '"Привет" === "Пока"', value: "Привет" === "Пока" },
+            { expr: '73 === "53"', value: 73 === "53" },
+            { expr: 'false === 0', value: false === 0 },
+            { expr: '54 === true', value: 54 === true },
+            { expr: '123 === false', value: 123 === false },
+            { expr: 'true === "3"', value: true === "3" },
+            { expr: '3 === "3"', value: 3 === "3" },
+            { expr: '8 === "-2"', value: 8 === "-2" },
+            { expr: '34 === "34"', value: 34 === "34" },
+            { expr: 'null === undefined', value: null === undefined }
+        ];
+        
+        let comparisonsHTML = '';
+        comparisons.forEach(comp => {
+            comparisonsHTML += `
+                <div class="comparison">
+                    <div class="comparison-item">${comp.expr}</div>
+                    <div class="comparison-item">${comp.value}</div>
+                </div>
+            `;
+        });
+        
+        document.getElementById('task4-result').innerHTML = comparisonsHTML;
+    </script>
+</body>
+</html>

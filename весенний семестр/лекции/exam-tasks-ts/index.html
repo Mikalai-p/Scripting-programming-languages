@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Задачи А–Е (TypeScript)</title>
+  <style>
+    .active { background: yellow; cursor: pointer; padding: 8px; }
+    section { margin-bottom: 24px; }
+    hr { margin: 16px 0; }
+  </style>
+</head>
+<body>
+  <h1>Примерные задачи А–Е</h1>
+
+  <section>
+    <h2>А. Счётчик</h2>
+    <p id="count">0</p>
+    <button id="inc" type="button">+</button>
+    <button id="dec" type="button">−</button>
+  </section>
+  <hr>
+
+  <section>
+    <h2>Б. Ввод → показ на странице</h2>
+    <input id="name" type="text" placeholder="Введите имя">
+    <p id="output"></p>
+  </section>
+  <hr>
+
+  <section>
+    <h2>В. Количество → список</h2>
+    <input id="count-list" type="number" min="0" value="3">
+    <button id="btn-list" type="button">Создать список</button>
+    <ul id="list"></ul>
+  </section>
+  <hr>
+
+  <section>
+    <h2>Г. Удалить элемент</h2>
+    <ul id="list-del">
+      <li>Один <button class="del" type="button">×</button></li>
+      <li>Два <button class="del" type="button">×</button></li>
+      <li>Три <button class="del" type="button">×</button></li>
+    </ul>
+  </section>
+  <hr>
+
+  <section>
+    <h2>Д. Смена цвета</h2>
+    <div id="box">Кликни меня</div>
+  </section>
+  <hr>
+
+  <section>
+    <h2>Е. Синхронизация полей</h2>
+    <input id="a" type="text" placeholder="Поле 1">
+    <input id="b" type="text" placeholder="Поле 2">
+  </section>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

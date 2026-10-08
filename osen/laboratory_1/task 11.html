@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 11 - Функции</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e8f4f8;
+            border-radius: 4px;
+        }
+        .input-group {
+            margin: 10px 0;
+        }
+        input {
+            padding: 8px;
+            width: 100px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task 11 - Функции</h1>
+        
+        <div class="input-group">
+            <input type="number" id="paramA" placeholder="Параметр A" value="5">
+            <input type="number" id="paramB" placeholder="Параметр B" value="5">
+            <button onclick="runTask()">Запустить задание</button>
+        </div>
+        
+        <div class="result" id="result"></div>
+        
+        <script>
+            function runTask() {
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = '<h3>Результаты:</h3>';
+                
+                const a = parseInt(document.getElementById('paramA').value) || 0;
+                const b = parseInt(document.getElementById('paramB').value) || 0;
+
+                // Function Declaration
+                function params(a, b) {
+                    if (a === b) {
+                        return 4 * a;
+                    } else {
+                        return a * b;
+                    }
+                }
+
+                // Function Expression
+                const paramsExpr = function(a, b) {
+                    if (a === b) {
+                        return 4 * a;
+                    } else {
+                        return a * b;
+                    }
+                };
+
+                // Arrow Function
+                const paramsArrow = (a, b) => {
+                    if (a === b) {
+                        return 4 * a;
+                    } else {
+                        return a * b;
+                    }
+                };
+                
+                const results = [
+                    { name: "Function Declaration", value: params(a, b) },
+                    { name: "Function Expression", value: paramsExpr(a, b) },
+                    { name: "Arrow Function", value: paramsArrow(a, b) }
+                ];
+                
+                const p = document.createElement('p');
+                p.innerHTML = `<strong>Параметры:</strong> a = ${a}, b = ${b}`;
+                resultDiv.appendChild(p);
+                
+                results.forEach(item => {
+                    const p = document.createElement('p');
+                    p.innerHTML = `<strong>${item.name}:</strong> ${item.value}`;
+                    resultDiv.appendChild(p);
+                    
+                    // Также выводим в консоль
+                    console.log(`${item.name}:`, item.value);
+                });
+            }
+        </script>
+    </div>
+</body>
+</html>

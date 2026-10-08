@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7 - Преобразования типов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e8f4f8;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task 7 - Преобразования типов</h1>
+        
+        <button onclick="runTask()">Запустить задание</button>
+        
+        <div class="result" id="result"></div>
+        
+        <script>
+            function runTask() {
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = '<h3>Результаты:</h3>';
+                
+                const results = [
+                    { expr: 'true + true', value: true + true },
+                    { expr: '0 + "5"', value: 0 + "5" },
+                    { expr: '5 + "мм"', value: 5 + "мм" },
+                    { expr: '8 / Infinity', value: 8 / Infinity },
+                    { expr: '9 * "\\n9"', value: 9 * "\n9" },
+                    { expr: 'null - 1', value: null - 1 },
+                    { expr: '"5" - 2', value: "5" - 2 },
+                    { expr: '"5px" - 3', value: "5px" - 3 },
+                    { expr: 'true - 3', value: true - 3 },
+                    { expr: '7 || 0', value: 7 || 0 }
+                ];
+                
+                results.forEach(item => {
+                    const p = document.createElement('p');
+                    p.textContent = `${item.expr} = ${item.value} (тип: ${typeof item.value})`;
+                    resultDiv.appendChild(p);
+                    
+                    // Также выводим в консоль
+                    console.log(`${item.expr} =`, item.value);
+                });
+            }
+        </script>
+    </div>
+</body>
+</html>
